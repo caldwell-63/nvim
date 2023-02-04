@@ -1,0 +1,27 @@
+{
+	"console.log": {
+    "description": "console.log(...)",
+		"prefix": "l",
+		"body": [
+			"console.log($0);"
+		]
+	},
+  "function": {
+    "description": "function",
+    "prefix": "f",
+    "body": [
+      "function $1($2) {",
+        "$0",
+      "}"
+    ]
+  },
+  "interface": {
+    "description": "interface",
+    "prefix": "i",
+    "body": [
+      "interface $1 {",
+        "$0",
+      "}"
+    ]
+  }
+}
