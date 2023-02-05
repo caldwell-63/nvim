@@ -6,6 +6,7 @@
 - LSP configured with `lsp-zero.nvim`
 - Language servers managed by `mason.nvim`
 
-## References
+## Inspirations
 
+- https://github.com/stars/caldwell-63/lists/nvim
 - https://gitlab.com/bushblade/neovim-config
