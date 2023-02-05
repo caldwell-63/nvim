@@ -1,6 +1,6 @@
 -- autochdir
 
-function openNetrw(changeDir)
+local function openNetrw(changeDir)
   local ft = vim.bo.filetype;
   local bt = vim.bo.buftype;
   local isReadonly = vim.bo.readonly;

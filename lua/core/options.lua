@@ -22,7 +22,7 @@ vim.cmd([[
   set cul
   set nocuc
   set tw=80
-  set cc=80
+  set cc=81
   set ignorecase
   set autoindent
   set keywordprg=
@@ -33,7 +33,7 @@ vim.cmd([[
   au VimLeave,VimSuspend * set guicursor=
 ]]);
 
-function cursorCenterLock()
+function lockCursorCenterOnVerticalMovements()
   vim.cmd([[
     nn <C-d> <C-d>zz
     nn <C-u> <C-u>zz

@@ -7,10 +7,8 @@ local function getHlGroupNameUnderTheCursor()
   -- Might be more stable now in recent treesitter versions.
 end;
 
-local treesitter = {
+return {
   printHlGroupNameUnderTheCursor = function()
     print(vim.inspect(getHlGroupNameUnderTheCursor()));
   end
 };
-
-return treesitter;

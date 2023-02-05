@@ -1,24 +1,14 @@
-local treesitter = require 'utils.treesitter';
+local api = require 'api';
+local mason = require 'api.mason';
+local treesitter = require 'api.treesitter';
 
-vim.keymap.set("n", "<C-j>", treesitter.printHlGroupNameUnderTheCursor);
+local function n(l, r, desc, isSilent)
+  vim.keymap.set('n', l, r, { desc = desc, silent = isSilent });
+end
 
-local mason = {
-  open = function ()
-    vim.cmd('Mason');
-  end,
-};
+n('<Leader>ot', api.startNewCmd, '🏴 Open/start new cmd (terminal)', true);
+n('<Leader>oc', api.startChrome, 'Open/start Chrome', true);
 
-local utils = {
-  config = function ()
-    vim.cmd 'e ~/AppData/Local/nvim/';
-  end,
-};
-
-vim.keymap.set('n', '<leader>m', mason.open, { desc = 'Open Mason' });
-vim.keymap.set('n', '<F3>', utils.config, { desc = 'Open Config' });
-
--- vim.keymap.set('n', '<C-j>', function()
---   vim.cmd(':@"');
--- end, {
---   desc = 'Run selected text as vim command',
--- });
+n('<leader>m', mason.open, 'Open Mason');
+n('<F3>', api.goToConfig, 'Open Config');
+n('<C-j>', treesitter.printHlGroupNameUnderTheCursor);

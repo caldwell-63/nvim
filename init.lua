@@ -18,7 +18,6 @@ require 'paq' {
   'folke/which-key.nvim';
   'folke/neodev.nvim';
   'numToStr/Comment.nvim';
-  'j-hui/fidget.nvim';
   -- 'lewis6991/gitsigns.nvim';
   'kylechui/nvim-surround';
 
@@ -38,7 +37,6 @@ require 'paq' {
 
 
 require('Comment').setup();
-require('fidget').setup();
 -- require('gitsigns').setup();
 require 'nvim-surround'.setup({});
 require 'neodev'.setup({});
