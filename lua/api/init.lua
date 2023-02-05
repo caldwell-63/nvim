@@ -1,3 +1,5 @@
+local h = require 'utils.h';
+
 local api = {
   goToConfig = function()
     vim.cmd 'e ~/AppData/Local/nvim/';
@@ -8,12 +10,18 @@ local api = {
   startChrome = function()
     vim.cmd 'silent !start chrome';
   end,
-};
+  applyHlGroups = function(groups)
+    for k, v in pairs(groups) do
+      local bg = v[1];
+      local fg = v[2];
+      local gu = v[3];
 
--- vim.keymap.set('n', '<C-j>', function()
---   vim.cmd(':@"');
--- end, {
---   desc = 'Run selected text as vim command',
--- });
+      h(k, bg, fg, gu);
+    end
+  end,
+  runCopiedCommand = function()
+    vim.cmd ':@"';
+  end,
+};
 
 return api;

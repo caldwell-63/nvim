@@ -8,17 +8,14 @@ require 'plugin.telescope';
 require 'paq' {
   'savq/paq-nvim';
   'nvim-lua/plenary.nvim';
-  'MunifTanjim/nui.nvim',
+  'MunifTanjim/nui.nvim';
   { 'nvim-treesitter/nvim-treesitter', run = function() vim.cmd 'TSUpdate' end };
-  {
-    'nvim-telescope/telescope.nvim',
-    branch = '0.1.x'
-  };
+  { 'nvim-telescope/telescope.nvim', branch = '0.1.x' };
   'uga-rosa/ccc.nvim';
   'folke/which-key.nvim';
   'folke/neodev.nvim';
   'numToStr/Comment.nvim';
-  -- 'lewis6991/gitsigns.nvim';
+  'lewis6991/gitsigns.nvim';
   'kylechui/nvim-surround';
 
   -- LSP
@@ -37,7 +34,7 @@ require 'paq' {
 
 
 require('Comment').setup();
--- require('gitsigns').setup();
+require('gitsigns').setup();
 require 'nvim-surround'.setup({});
 require 'neodev'.setup({});
 

@@ -8,7 +8,7 @@ end
 
 n('<Leader>ot', api.startNewCmd, '🏴 Open/start new cmd (terminal)', true);
 n('<Leader>oc', api.startChrome, 'Open/start Chrome', true);
-
 n('<leader>m', mason.open, 'Open Mason');
 n('<F3>', api.goToConfig, 'Open Config');
 n('<C-j>', treesitter.printHlGroupNameUnderTheCursor);
+-- n('?', api.runCopiedCommand, 'Run copied command');

@@ -1,5 +1,4 @@
-local h = require 'utils.h';
-require('themes.vs-light');
+local api = require 'api';
 
 vim.cmd 'set background=light';
 
@@ -29,13 +28,12 @@ local colors = {
   number = palette.DeepSea,
 };
 
-local theme = {
-
-  TermCursor = { colors.fg, colors.fg },
-  TermCursorNC = { colors.fg, colors.fg },
-  lCursor = { colors.fg, colors.fg },
-  CursorIM = { colors.fg, colors.fg },
-  Cursor = { colors.fg, colors.fg },
+api.applyHlGroups {
+  -- TermCursor = { colors.fg, colors.fg },
+  -- TermCursorNC = { colors.fg, colors.fg },
+  -- lCursor = { colors.fg, colors.fg },
+  -- CursorIM = { colors.fg, colors.fg },
+  -- Cursor = { colors.fg, colors.fg },
 
   TabLineFill = { colors.float },
   TabLine = { colors.visual },
@@ -78,17 +76,9 @@ local theme = {
   CursorColumn = { colors.float },
   Title = { nil, colors.primary },
   Directory = { nil, colors.secondary },
-  StatusLine = { nil, colors.primary },
+  StatusLine = { colors.primary, colors.bg },
   Visual = { colors.visual },
   NonText = { colors.bg, colors.bg }, -- clean
   SpecialKey = { 'bg', colors.secondary },
   MsgArea = { colors.float, colors.primary },
-};
-
-for k, v in pairs(theme) do
-  local bg = v[1];
-  local fg = v[2];
-  local gu = v[3];
-
-  h(k, bg, fg, gu);
-end
+}

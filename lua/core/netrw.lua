@@ -42,8 +42,6 @@ vim.api.nvim_create_autocmd('filetype', {
     bind('l', '<Enter>');
     bind('h', '-');
 
-    vim.cmd('set timeoutlen=0');
-
     bind('m', function()
       toggle = vim.api.nvim_get_current_line();
       print(toggle)
