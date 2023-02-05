@@ -1,15 +1,15 @@
 local api = require 'api';
 
 local palette = {
-  OrientalPink = '#CE9178',
-  CelestialBlue = '#569CD6',
-  Lochmara = '#007acc',
-  MutedGreen = '#6a9955',
-  ClayAsh = '#b5cea8',
-  Iron = '#d7d7d7',
   DynamicBlack = '#1e1e1e',
   Nero = '#252526',
   BlackCoral = '#515c6a',
+  Lochmara = '#007acc',
+  Iron = '#d7d7d7',
+  CelestialBlue = '#569CD6',
+  OrientalPink = '#CE9178',
+  ClayAsh = '#b5cea8',
+  MutedGreen = '#6a9955',
   Liver = '#613214',
 };
 
@@ -27,6 +27,10 @@ local colors = {
   statusline = palette.Lochmara,
 };
 
+local bg = colors.bg;
+
+-- api.applyTheme(theme); (colors -> theme)
+
 api.applyHlGroups {
   Cursor = { colors.cursor, colors.cursor },
   lCursor = { colors.primary, colors.secondary },
@@ -37,9 +41,6 @@ api.applyHlGroups {
   TabLineFill = { colors.float },
   TabLine = { colors.visual },
   TabLineSel = { colors.primary },
-  DiagnosticInfo = { colors.fg },
-  DiagnosticHint = { '#fff000' },
-  DiagnosticError = { '#f00000' },
   ColorColumn = { colors.float },
 
   Search = { colors.visual, 'fg' },
@@ -79,13 +80,22 @@ api.applyHlGroups {
   MsgArea = { colors.float, colors.primary },
 
   LineNr = { colors.bg, colors.visual },
-  CursorLineNr = { colors.bg, colors.comment, 'bold' },
+  CursorLineNr = { colors.bg, colors.fg, 'bold' },
 
   -- ???
   Conceal = { '#00ff00', '#ff0000' },
   -- Scrollbar = { r, g },
   -- Tooltip = { g, b },
 };
+
+local diagnostic = {
+  DiagnosticInfo = { bg, '#cccccc' },
+  DiagnosticHint = { bg, '#19e6e6' },
+  DiagnosticWarn = { bg, '#e69419' },
+  DiagnosticError = { bg, '#e61919' },
+};
+
+api.applyHlGroups(diagnostic);
 
 local gitsigns = {
   GitSignsAdd = { colors.bg, '#68eb47' },

@@ -11,4 +11,5 @@ n('<Leader>oc', api.startChrome, 'Open/start Chrome', true);
 n('<leader>m', mason.open, 'Open Mason');
 n('<F3>', api.goToConfig, 'Open Config');
 n('<C-j>', treesitter.printHlGroupNameUnderTheCursor);
+n('<C-p>', function() vim.cmd 'so' end);
 -- n('?', api.runCopiedCommand, 'Run copied command');
