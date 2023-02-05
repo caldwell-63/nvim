@@ -14,7 +14,7 @@ local api = {
     for k, v in pairs(groups) do
       local bg = v[1];
       local fg = v[2];
-      local gu = v[3];
+      local gu = v[3] or 'NONE';
 
       h(k, bg, fg, gu);
     end

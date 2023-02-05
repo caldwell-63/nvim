@@ -3,6 +3,7 @@ local api = require 'api';
 local palette = {
   OrientalPink = '#CE9178',
   CelestialBlue = '#569CD6',
+  Lochmara = '#007acc',
   MutedGreen = '#6a9955',
   ClayAsh = '#b5cea8',
   Iron = '#d7d7d7',
@@ -23,6 +24,7 @@ local colors = {
   comment = palette.MutedGreen,
   number = palette.ClayAsh,
   cursor = '#FFFFFF',
+  statusline = palette.Lochmara,
 };
 
 api.applyHlGroups {
@@ -40,11 +42,10 @@ api.applyHlGroups {
   DiagnosticError = { '#f00000' },
   ColorColumn = { colors.float },
 
-  Search = { colors.float },
-  CurSearch = { colors.visual },
-  IncSearch = { colors.secondary },
+  Search = { colors.visual, 'fg' },
+  CurSearch = { colors.secondary, 'bg' },
+  IncSearch = { colors.secondary, 'bg' },
 
-  Conceal = { colors.primary, '#ff0000' },
   Identifier = { nil, 'fg' },
   Statement = { nil, colors.primary },
   Boolean = { nil, colors.primary },
@@ -60,11 +61,10 @@ api.applyHlGroups {
   Pmenu = { colors.float },
   PmenuSel = { colors.visual },
   SignColumn = { colors.bg },
-
-  -- ???
-  -- Scrollbar = { r, g },
-  -- Tooltip = { g, b },
+  StatusLine = { colors.statusline, colors.fg },
+  StatusLineNC = { colors.fg, colors.statusline },
   WinSeparator = { colors.bg, colors.float },
+  MsgSeparator = { '#ff0000', "#000ff0" },
 
   Normal = { colors.bg, colors.fg },
   NormalNC = { colors.bg, colors.fg }, -- Not Active
@@ -73,7 +73,6 @@ api.applyHlGroups {
   CursorColumn = { colors.float },
   Title = { nil, colors.primary },
   Directory = { nil, colors.secondary },
-  StatusLine = { colors.primary, colors.bg },
   Visual = { colors.visual },
   NonText = { colors.bg, colors.bg }, -- clean
   SpecialKey = { 'bg', colors.secondary },
@@ -81,6 +80,11 @@ api.applyHlGroups {
 
   LineNr = { colors.bg, colors.visual },
   CursorLineNr = { colors.bg, colors.comment, 'bold' },
+
+  -- ???
+  Conceal = { '#00ff00', '#ff0000' },
+  -- Scrollbar = { r, g },
+  -- Tooltip = { g, b },
 };
 
 local gitsigns = {
