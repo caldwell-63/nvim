@@ -10,19 +10,17 @@ vim.opt.softtabstop    = config.tab;
 vim.opt.shiftwidth     = config.tab;
 vim.opt.number         = config.number;
 vim.opt.relativenumber = config.number;
+vim.opt.termguicolors  = true;
 vim.opt.expandtab      = true;
 vim.opt.swapfile       = false;
 vim.opt.laststatus     = 3;
 vim.opt.signcolumn     = 'yes:1';
 vim.opt.wrap           = false;
 vim.opt.ruler          = true;
+vim.opt.rulerformat    = "%80(%l/%L\\ %c%)"
+vim.opt.foldlevel      = 16;
 
 vim.cmd([[
-  setg nu
-  setg rnu
-  set rulerformat=%80(%l/%L\ %c%)
-  set termguicolors
-  set foldlevel=16
   set foldmethod=expr
   set foldexpr=nvim_treesitter#foldexpr()
   set cul

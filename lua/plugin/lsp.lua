@@ -7,10 +7,10 @@ lsp.preset('recommended');
 
 lsp.set_preferences({
   sign_icons = {
-    error = 'E',
-    warn = 'W',
-    hint = 'H',
-    info = 'I',
+    info = '•',
+    hint = '•',
+    warn = '?',
+    error = '!',
   },
 });
 

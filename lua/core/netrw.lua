@@ -6,7 +6,7 @@ local function openNetrw(changeDir)
   local isReadonly = vim.bo.readonly;
 
   if isReadonly then return vim.cmd('e .') end
-  if ft == 'netrw' then return end -- go dir up
+  if ft == 'netrw' then return 'h' end -- go dir up
   if bt == 'nofile' then return end
 
   if changeDir then vim.cmd('cd %:h') end
