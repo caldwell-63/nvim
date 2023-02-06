@@ -13,11 +13,9 @@ n('<F3>', api.goToConfig, 'Open Config');
 n('<C-j>', treesitter.printHlGroupNameUnderTheCursor);
 n('<C-p>', function() vim.cmd 'so' end);
 n('<Leader>gg', function()
-  vim.cmd 'silent !git add .';
-
   local commitMessage = vim.fn.input('');
 
-  vim.cmd('silent !git commit -m "' .. commitMessage .. '"');
+  vim.cmd('silent !git commit -a -m "' .. commitMessage .. '"');
 end, 'Git add all and commit');
 n('<Leader>gp', function() vim.cmd 'silent !git push'; end);
 
