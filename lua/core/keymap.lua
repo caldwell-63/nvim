@@ -12,4 +12,12 @@ n('<leader>m', mason.open, 'Open Mason');
 n('<F3>', api.goToConfig, 'Open Config');
 n('<C-j>', treesitter.printHlGroupNameUnderTheCursor);
 n('<C-p>', function() vim.cmd 'so' end);
+n('<Leader>gg', function()
+  vim.cmd 'silent !git add .';
+
+  local commitMessage = vim.fn.input('');
+
+  vim.cmd('!git commit -m "' .. commitMessage .. '"');
+end, 'Git add all and commit');
+
 -- n('?', api.runCopiedCommand, 'Run copied command');
