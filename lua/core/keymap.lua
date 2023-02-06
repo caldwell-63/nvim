@@ -19,5 +19,6 @@ n('<Leader>gg', function()
 
   vim.cmd('silent !git commit -m "' .. commitMessage .. '"');
 end, 'Git add all and commit');
+n('<Leader>gp', function() vim.cmd 'silent !git push'; end);
 
 -- n('?', api.runCopiedCommand, 'Run copied command');
