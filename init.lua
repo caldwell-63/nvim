@@ -22,7 +22,6 @@ require 'paq' {
   'nvim-treesitter/nvim-treesitter-textobjects',
 
   -- LSP
-  'VonHeikemen/lsp-zero.nvim';
   'neovim/nvim-lspconfig';
   'williamboman/mason.nvim';
   'williamboman/mason-lspconfig.nvim';
@@ -35,7 +34,6 @@ require 'paq' {
   'L3MON4D3/LuaSnip';
 };
 
-require 'plugin.lsp';
 require 'plugin.treesitter';
 require 'plugin.telescope';
 
