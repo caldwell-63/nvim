@@ -14,6 +14,8 @@ n('<C-j>', treesitter.printHlGroupNameUnderTheCursor);
 n('<C-p>', function() vim.cmd 'so' end);
 
 -- Git
+
+-- todo: motion to change second argument (probably treesitter based)
 n('<Leader>gi', function()
   vim.cmd 'silent !git init';
 end, 'git init');
