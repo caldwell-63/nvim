@@ -1,15 +1,11 @@
 require 'core.options';
 require 'core.keymap';
 require 'core.netrw';
-require 'plugin.treesitter';
-require 'plugin.lsp';
-require 'plugin.telescope';
 
 require 'paq' {
   'savq/paq-nvim';
   'nvim-lua/plenary.nvim';
   'MunifTanjim/nui.nvim';
-  { 'nvim-treesitter/nvim-treesitter', run = function() vim.cmd 'TSUpdate' end };
   { 'nvim-telescope/telescope.nvim', branch = '0.1.x' };
   'uga-rosa/ccc.nvim';
   'folke/which-key.nvim';
@@ -17,6 +13,13 @@ require 'paq' {
   'numToStr/Comment.nvim';
   'lewis6991/gitsigns.nvim';
   'kylechui/nvim-surround';
+
+  {
+    'nvim-treesitter/nvim-treesitter',
+    run = function() vim.cmd 'TSUpdate' end
+  };
+
+  'nvim-treesitter/nvim-treesitter-textobjects',
 
   -- LSP
   'VonHeikemen/lsp-zero.nvim';
@@ -32,6 +35,9 @@ require 'paq' {
   'L3MON4D3/LuaSnip';
 };
 
+require 'plugin.lsp';
+require 'plugin.treesitter';
+require 'plugin.telescope';
 
 require('Comment').setup();
 require('gitsigns').setup();

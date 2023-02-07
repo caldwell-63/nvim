@@ -1,6 +1,7 @@
 local api = require 'api';
 local mason = require 'api.mason';
 local treesitter = require 'api.treesitter';
+local git = require 'api.git';
 
 local function n(l, r, desc, isSilent)
   vim.keymap.set('n', l, r, { desc = desc, silent = isSilent });
@@ -16,9 +17,7 @@ n('<C-p>', function() vim.cmd 'so' end);
 -- Git
 
 -- todo: motion to change second argument (probably treesitter based)
-n('<Leader>gi', function()
-  vim.cmd 'silent !git init';
-end, 'git init');
+n('<Leader>gi', git.init, 'git init');
 
 n('<Leader>gg', function()
   vim.cmd 'wa';

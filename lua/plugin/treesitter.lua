@@ -4,8 +4,20 @@ local install = require 'nvim-treesitter.install';
 install.prefer_git = false;
 
 configs.setup {
+  textobjects = {
+    select = {
+      enable = true,
+      lookahead = true,
+      keymaps = {
+        ['af'] = '@function.outer',
+        ['if'] = '@function.inner',
+        ['aP'] = '@parameter.outer',
+        ['iP'] = '@parameter.inner',
+      },
+    },
+  },
   ensure_installed = {
-    'lua', 'vim', 'help', 'typescript', 'javascript', 'markdown'
+    'lua', 'vim', 'help', 'typescript', 'javascript', 'markdown', 'css'
   },
   sync_install = false,
   highlight = {
