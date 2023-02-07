@@ -14,17 +14,8 @@ n('<F3>', api.goToConfig, 'Open Config');
 n('<C-j>', treesitter.printHlGroupNameUnderTheCursor);
 n('<C-p>', function() vim.cmd 'so' end);
 
--- Git
-
--- todo: motion to change second argument (probably treesitter based)
 n('<Leader>gi', git.init, 'git init');
-
-n('<Leader>gg', function()
-  vim.cmd 'wa';
-  local commitMessage = vim.fn.input('');
-  vim.cmd('silent !git commit -a -m "' .. commitMessage .. '"');
-end, 'save all and git commit all');
-
-n('<Leader>gp', function() vim.cmd 'silent !git push'; end, 'git push');
+n('<Leader>gg', git.commitAll, 'save all and git commit all');
+n('<Leader>gp', git.push, 'git push');
 
 -- n('?', api.runCopiedCommand, 'Run copied command');
