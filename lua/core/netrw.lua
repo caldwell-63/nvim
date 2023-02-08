@@ -6,6 +6,7 @@ local function openNetrw(changeDir)
   local isReadonly = vim.bo.readonly;
 
   if isReadonly then return vim.cmd('e .') end
+  if ft == '' or ft == ' ' or not ft then return vim.cmd('e .') end
   if ft == 'netrw' then return 'h' end -- go dir up
   if bt == 'nofile' then return end
 
@@ -17,7 +18,7 @@ end
 
 vim.keymap.set('n', '<Esc>', function()
   vim.cmd('noh');
-  openNetrw(true);
+  openNetrw();
 end);
 
 vim.cmd([[

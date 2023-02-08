@@ -25,7 +25,7 @@ vim.cmd([[
   set foldexpr=nvim_treesitter#foldexpr()
   set cul
   set nocuc
-  set tw=80
+  set tw=81
   set cc=81
   set ignorecase
   set autoindent
