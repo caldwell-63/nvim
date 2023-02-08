@@ -15,8 +15,6 @@ local function openNetrw(changeDir)
   vim.cmd('e .');
 end
 
-vim.keymap.set('n', '<Enter>', function() openNetrw() end);
-
 vim.keymap.set('n', '<Esc>', function()
   vim.cmd('noh');
   openNetrw(true);
