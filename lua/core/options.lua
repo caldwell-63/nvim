@@ -17,7 +17,7 @@ vim.opt.laststatus     = 3;
 vim.opt.signcolumn     = 'yes:1';
 vim.opt.wrap           = false;
 vim.opt.ruler          = true;
-vim.opt.rulerformat    = "%80(%l/%L\\ %c%)"
+vim.opt.rulerformat    = "%80(%l/%L %c%)"
 vim.opt.foldlevel      = 16;
 
 vim.cmd([[
@@ -44,3 +44,5 @@ function lockCursorCenterOnVerticalMovements()
     nn G Gzz
   ]]);
 end
+
+lockCursorCenterOnVerticalMovements();

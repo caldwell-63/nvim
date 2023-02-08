@@ -47,14 +47,15 @@ api.applyHlGroups {
   CurSearch = { colors.secondary, 'bg' },
   IncSearch = { colors.secondary, 'bg' },
 
-  Identifier = { nil, 'fg' },
+  -- Syntax
+  PreProc = { nil, colors.fg },
+  Special = { nil, colors.fg },
   Statement = { nil, colors.primary },
+  Identifier = { nil, 'fg' },
   Boolean = { nil, colors.primary },
   Constant = { nil, colors.secondary },
-  PreProc = { nil, colors.primary },
   Number = { nil, colors.number },
-  Special = { nil, colors.primary },
-  Error = { nil, '#ff0000' },
+  Error = { colors.float, colors.fg },
   Type = { nil, colors.primary },
   Comment = { nil, colors.comment },
 
@@ -62,10 +63,7 @@ api.applyHlGroups {
   Pmenu = { colors.float },
   PmenuSel = { colors.visual },
   SignColumn = { colors.bg },
-  StatusLine = { colors.statusline, colors.fg },
-  StatusLineNC = { colors.fg, colors.statusline },
   WinSeparator = { colors.bg, colors.float },
-  MsgSeparator = { '#ff0000', "#000ff0" },
 
   Normal = { colors.bg, colors.fg },
   NormalNC = { colors.bg, colors.fg }, -- Not Active
@@ -77,13 +75,18 @@ api.applyHlGroups {
   Visual = { colors.visual },
   NonText = { colors.bg, colors.bg }, -- clean
   SpecialKey = { 'bg', colors.secondary },
-  MsgArea = { colors.float, colors.primary },
+
+  StatusLine = { colors.statusline, colors.bg },
+  StatusLineNC = { colors.statusline, colors.bg },
+  MsgArea = { colors.float, colors.fg },
+  ErrorMsg = { colors.float, colors.primary },
 
   LineNr = { colors.bg, colors.visual },
   CursorLineNr = { colors.bg, colors.fg, 'bold' },
 
   -- ???
   Conceal = { '#00ff00', '#ff0000' },
+  MsgSeparator = { '#ff0000', "#000ff0" },
   -- Scrollbar = { r, g },
   -- Tooltip = { g, b },
 };
@@ -100,7 +103,7 @@ api.applyHlGroups(diagnostic);
 local gitsigns = {
   GitSignsAdd = { colors.bg, '#68eb47' },
   GitSignsChange = { colors.bg, '#47ebeb' },
-  GitSignsDelete = { colors.bg, '#47ebeb' },
+  GitSignsDelete = { colors.bg, '#ed5959' },
   GitSignsChangedelete = { colors.bg },
   GitSignsTopdelete = { colors.bg },
   GitSignsUntracked = { colors.bg },
