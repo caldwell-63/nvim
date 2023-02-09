@@ -1,19 +1,26 @@
 {
-	"name": "snippets",
-	"contributes": {
-		"snippets": [
+  "name": "snippets",
+  "contributes": {
+    "snippets": [
       {
-				"language": ["all"],
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "lua",
-				"path": "./snippets/lua.json"
-			},
-			{
-				"language": ["javascript", "typescript", "javascriptreact","typescriptreact"],
-				"path": "./snippets/typescript.json"
-			}
-		]
-	}
+        "language": [
+          "all"
+        ],
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "lua",
+        "path": "./snippets/lua.json"
+      },
+      {
+        "language": [
+          "javascript",
+          "typescript",
+          "javascriptreact",
+          "typescriptreact"
+        ],
+        "path": "./snippets/typescript.json"
+      }
+    ]
+  }
 }

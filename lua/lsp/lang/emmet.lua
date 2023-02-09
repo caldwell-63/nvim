@@ -1,0 +1,9 @@
+-- lsp.configure('emmet-ls', {
+--   filetypes = {
+--     'html',
+--     'typescript',
+--     'typescriptreact',
+--     'javascriptreact',
+--     'css', 'sass', 'scss', 'less'
+--   },
+-- });

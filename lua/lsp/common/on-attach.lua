@@ -1,8 +1,4 @@
 local function on_attach(_, buffnr)
-  -- enable completion triggered by <c-x><c-o> (?)
-  vim.api.nvim_buf_set_option(buffnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc');
-
-  -- :h vim.lsp.*
   local buffopts = {
     noremap = true,
     silent = true,
