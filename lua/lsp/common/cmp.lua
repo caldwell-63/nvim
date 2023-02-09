@@ -1,7 +1,8 @@
 local luasnip = require 'luasnip'
 local cmp = require 'cmp'
-
 require("luasnip.loaders.from_vscode").load();
+
+if not cmp then return end
 
 cmp.setup {
   snippet = {
@@ -10,10 +11,9 @@ cmp.setup {
     end,
   },
   mapping = cmp.mapping.preset.insert({
-    ['<C-u>'] = cmp.mapping.scroll_docs(-4), -- Up
-    ['<C-d>'] = cmp.mapping.scroll_docs(4), -- Down
-    -- C-b (back) C-f (forward) for snippet placeholder navigation.
-    ['<C-Space>'] = cmp.mapping.complete(),
+    -- ['<C-u>'] = cmp.mapping.scroll_docs(-4), -- Up
+    -- ['<C-d>'] = cmp.mapping.scroll_docs(4), -- Down
+    -- ['<C-Space>'] = cmp.mapping.complete(),
     ['<CR>'] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
@@ -36,7 +36,18 @@ cmp.setup {
         fallback()
       end
     end, { 'i', 's' }),
-    ['<C-L>'] = cmp.mapping.confirm({ select = true })
+    ['<C-L>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.confirm {
+          behavior = cmp.ConfirmBehavior.Replace,
+          select = true,
+        }
+      elseif luasnip.jumpable(1) then
+        luasnip.jump(1);
+      else
+        fallback()
+      end
+    end, { 'i' })
   }),
   sources = {
     { name = 'luasnip' },

@@ -1,1 +1,9 @@
-{ }
+{
+	"test global snippets": {
+    "description": "test",
+		"prefix": "snippettest",
+		"body": [
+			"console.log($0);$1"
+		]
+	}
+}
