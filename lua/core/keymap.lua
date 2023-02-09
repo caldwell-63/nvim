@@ -1,5 +1,4 @@
 local api = require 'api';
-local mason = require 'api.mason';
 -- local treesitter = require 'api.treesitter';
 local git = require 'api.git';
 
@@ -11,11 +10,6 @@ vim.keymap.set('n', '<Leader>ot', api.startNewCmd, {
 vim.keymap.set('n', '<Leader>oc', api.startChrome, {
   silent = true,
   desc = 'Open/start Chrome',
-});
-
-vim.keymap.set('n', '<Leader>om', mason.open, {
-  silent = true,
-  desc = 'Open mason'
 });
 
 vim.keymap.set('n', '<Leader>dt', function()
