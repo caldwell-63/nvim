@@ -3,6 +3,8 @@ require 'lsp.common.cmp';
 
 require 'lsp.lang.json';
 require 'lsp.lang.lua';
+require 'lsp.lang.emmet';
+
 -- require 'lsp.lang.typescript';
 
 -- Todo:
