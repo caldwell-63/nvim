@@ -5,7 +5,7 @@ How is it different from all the great setups out there?
 - No file explorer/tree plugins; they all have their flaws and netrw is actually
   quite effective (with just few more ergonomic keymaps) and being native to Vim,
   it causes no performance problems
-- Paq.nvim as package manager - simple and predictable, no lazy loading
+- Simple and predictable `paq.nvim` package manager; no lazy loading
 - No bullshit plugins like animations, highly experimental slow UI plugins etc.
 - No terminal support/plugins whatsoever; we are not trying to build terminal 
   emulator/manager here, there are tools that do this very well already, 
@@ -15,20 +15,20 @@ How is it different from all the great setups out there?
 
 ## G
 
-- <Leader>gi  git init
-- <Leader>gg  save & commit all
-- <Leader>gp  git push
+- `<Leader>gi`  `git init`
+- `<Leader>gg`  `save & commit all`
+- `<Leader>gp`  `git push`
 
 ## Y
 
-- <Leader>yy  yarn
-- <Leader>ya  yarn add
+- `<Leader>yy`  `yarn`
+- `<Leader>ya`  `yarn add`
 
 ## Todo
 
 ### Markdown
 
-- Nested syntax highlights?
+- Nested syntax highlights
 - Preview
 
 ## Resources
