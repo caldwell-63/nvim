@@ -4,6 +4,7 @@ require 'core.options';
 require 'core.keymap';
 require 'core.netrw';
 require 'modules.yarn';
+require 'modules.LSP';
 
 require 'lsp';
 

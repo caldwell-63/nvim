@@ -24,6 +24,18 @@ How is it different from all the great setups out there?
 - `<Leader>yy`  `yarn`
 - `<Leader>ya`  `yarn add`
 
+## L | modules.LSP | LSP Control
+
+Shortcuts around commands provided by `lspconfig`. Useful especially that the LSP
+isn't always doing perfectly on its own, for example Lua language server has an
+issue when you change a workspace and it needs to be restarted.
+
+- `i` info       `:LspInfo`
+- `l` log        `:LspLog`
+- `r` restart    `:LspRestart`
+- `s` start      `:LspStart`
+- `d` stop       `:LspStop`
+
 ## Todo
 
 ### Markdown
