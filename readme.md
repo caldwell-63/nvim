@@ -5,7 +5,6 @@ How is it different from all the great setups out there?
 - No file explorer/tree plugins; they all have their flaws and netrw is actually
   quite effective (with just few more ergonomic keymaps) and being native to Vim,
   it causes no performance problems
-- No file explorer plugin, use built-in netrw with a few better keymaps for ergonomics
 - Paq.nvim as package manager - simple and predictable, no lazy loading
 - No bullshit plugins like animations, highly experimental slow UI plugins etc.
 - No terminal support/plugins whatsoever; we are not trying to build terminal 
