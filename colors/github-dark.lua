@@ -91,7 +91,7 @@ api.applyHlGroups {
 
   -- ???
   Conceal = { '#00ff00', '#ff0000' },
-  MsgSeparator = { '#ff0ff0', "#000ff0" },
+  MsgSeparator = { colors.visual, "#40bfbf" },
   -- Scrollbar = { r, g },
   -- Tooltip = { g, b },
 };

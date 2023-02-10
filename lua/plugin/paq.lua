@@ -4,8 +4,6 @@ require 'paq' {
   'MunifTanjim/nui.nvim';
   { 'nvim-telescope/telescope.nvim', branch = '0.1.x' };
   'uga-rosa/ccc.nvim';
-  'folke/which-key.nvim';
-  'folke/neodev.nvim';
   'numToStr/Comment.nvim';
   'lewis6991/gitsigns.nvim';
   'kylechui/nvim-surround';

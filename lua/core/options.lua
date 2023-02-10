@@ -1,7 +1,7 @@
 local config = {
   leader = ' ',
   tab = 2,
-  number = true,
+  number = false,
 };
 
 vim.g.mapleader        = config.leader;

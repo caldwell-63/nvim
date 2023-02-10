@@ -13,11 +13,6 @@ require 'plugin.telescope';
 require('Comment').setup();
 require('gitsigns').setup();
 require 'nvim-surround'.setup({});
-require 'neodev'.setup({});
-
-require 'which-key'.setup({});
-vim.o.timeout = true;
-vim.o.timeoutlen = 1024;
 
 local ccc = require("ccc")
 
