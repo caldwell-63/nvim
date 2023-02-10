@@ -3,5 +3,20 @@
   "format": {
     "enable": true,
     "defaultConfig": {}
-  }
+  },
+  "completion": {
+    "callSnippet": "Both"
+  },
+  "runtime": {
+    "version": "LuaJIT",
+    "builtin": {
+      "basic": "enable",
+      "builtin": "enable"
+    }
+  },
+  "workspace": {
+    "maxPreload": 100000,
+    "preloadFileSize": 100000
+  },
+  "misc.parameters": ["--locale=en-us"]
 }
