@@ -31,7 +31,7 @@ vim.cmd([[
   set autoindent
   set keywordprg=
 
-  colors vs-dark
+  colors github-dark
 
   au VimEnter,VimResume * set guicursor=n-c-ci-i-v-ve:hor100-Cursor,r-cr:hor100,o:hor100
   au VimLeave,VimSuspend * set guicursor=
