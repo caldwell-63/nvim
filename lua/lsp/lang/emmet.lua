@@ -1,4 +1,4 @@
-require'lspconfig'.emmet_ls.setup{
+require 'lspconfig'.emmet_ls.setup {
   filetypes = {
     'html',
     'typescript',
