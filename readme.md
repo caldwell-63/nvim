@@ -17,18 +17,18 @@ How is it different from all the great setups out there?
 - Install `paq-nvim` first
 - git clone & nvim 
 
-## G
+## Keys (`keys.*`)
+
+## `G` | Git
 
 - `<Leader>gi`  `git init`
-- `<Leader>gg`  `save & commit all`
+- `<Leader>gg`  `:wa` `git commit -a -m "_____"`
 - `<Leader>gp`  `git push`
-
-## Keys (`keys.*`)
 
 ## `Y` | Yarn
 
 - `<Leader>yy`  `yarn`
-- `<Leader>ya`  `yarn add`
+- `<Leader>ya`  `yarn add ____`
 
 ## `L` | LSP
 

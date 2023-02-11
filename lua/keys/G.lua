@@ -1,4 +1,4 @@
-return {
+local Git = {
   init = function()
     vim.cmd 'silent !git init';
   end,
@@ -14,3 +14,7 @@ return {
     vim.cmd 'silent !git push';
   end,
 };
+
+vim.keymap.set('n', '<Leader>gi', Git.init, { desc = 'init' });
+vim.keymap.set('n', '<Leader>gg', Git.commitAll, { desc = 'save and commit all' });
+vim.keymap.set('n', '<Leader>gp', Git.push, { desc = 'push' });

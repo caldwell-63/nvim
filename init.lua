@@ -5,6 +5,7 @@ require 'core.keymap';
 require 'core.netrw';
 require 'keys.L';
 require 'keys.Y';
+require 'keys.G';
 
 require 'lsp';
 
