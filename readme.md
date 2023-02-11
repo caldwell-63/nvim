@@ -9,9 +9,13 @@ How is it different from all the great setups out there?
 - No bullshit plugins featuring animations, highly experimental slow UI plugins etc
 - No terminal support/plugins whatsoever; we are not trying to build terminal 
   emulator/manager here, there are tools that do this very well already, 
-  supporting tabs, panes, keymaps, configs, etc. I'd recommend Windows Terminal 
-  for Windows users, and for MacOS and UNIX I'm sure you have all kinds of great 
-  tools to choose from
+  supporting tabs, panes, keymaps, configs, etc, I'd recommend wezterm
+- No compatibility with Windows guaranteed at all
+
+## Installation
+
+- Install `paq-nvim` first
+- git clone & nvim 
 
 ## G
 
@@ -19,12 +23,14 @@ How is it different from all the great setups out there?
 - `<Leader>gg`  `save & commit all`
 - `<Leader>gp`  `git push`
 
-## Y
+## Keys (`keys.*`)
+
+## `Y` | Yarn
 
 - `<Leader>yy`  `yarn`
 - `<Leader>ya`  `yarn add`
 
-## L | modules.LSP | LSP Control
+## `L` | LSP
 
 Shortcuts around commands provided by `lspconfig`. Useful especially that the LSP
 isn't always doing perfectly on its own, for example Lua language server has an

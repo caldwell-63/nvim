@@ -3,8 +3,8 @@ require 'plugin.paq';
 require 'core.options';
 require 'core.keymap';
 require 'core.netrw';
-require 'modules.yarn';
-require 'modules.LSP';
+require 'keys.L';
+require 'keys.Y';
 
 require 'lsp';
 
