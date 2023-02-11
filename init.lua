@@ -6,6 +6,7 @@ require 'core.netrw';
 require 'keys.L';
 require 'keys.Y';
 require 'keys.G';
+require 'keys.C';
 
 require 'lsp';
 
@@ -17,14 +18,6 @@ require('gitsigns').setup();
 require 'nvim-surround'.setup({});
 
 local ccc = require("ccc")
-
-vim.keymap.set('n', '<leader>co', function()
-  vim.cmd("CccPick");
-end, { desc = 'Pick/Edit Color', noremap = true, silent = true });
-
-vim.keymap.set('n', '<leader>ch', function()
-  vim.cmd("CccHighlighterToggle");
-end, { desc = 'Toggle Color Highlighting', noremap = true, silent = true });
 
 -- https://github.com/uga-rosa/ccc.nvim/blob/main/lua/ccc/config/default.lua
 ccc.setup({
