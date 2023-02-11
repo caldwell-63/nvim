@@ -4,7 +4,9 @@ return {
   end,
   commitAll = function()
     vim.cmd 'wa';
-    local commitMessage = vim.fn.input('');
+
+    local commitMessage = vim.fn.input { prompt = 'git commit -a -m ' };
+
     vim.cmd 'silent !git add .';
     vim.cmd('silent !git commit -a -m "' .. commitMessage .. '"');
   end,
