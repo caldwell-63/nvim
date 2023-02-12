@@ -12,7 +12,7 @@ require 'lsp';
 
 require 'plugin.treesitter';
 require 'plugin.telescope';
-require 'plugin.css';
+require 'plugin.ccc';
 
 require('Comment').setup();
 require('gitsigns').setup();
