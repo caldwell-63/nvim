@@ -3,7 +3,7 @@ local flags = require 'lsp.common.flags';
 local on_attach = require 'lsp.common.on-attach';
 local util = require 'lspconfig.util';
 
-lspc.sumneko_lua.setup {
+lspc.lua_ls.setup {
   on_attach = on_attach,
   flags = flags,
   single_file_support = true,

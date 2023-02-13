@@ -12,11 +12,6 @@ How is it different from all the great setups out there?
   supporting tabs, panes, keymaps, configs, etc, I'd recommend wezterm
 - No compatibility with Windows guaranteed at all
 
-## Installation
-
-- Install `paq-nvim` first
-- git clone & nvim 
-
 ## Keys (`keys.*`)
 
 ## `G` | Git

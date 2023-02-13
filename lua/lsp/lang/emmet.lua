@@ -5,7 +5,7 @@ local on_attach = require 'lsp.common.on-attach';
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require 'lspconfig'.emmet_ls.setup {
-  cmd = { "emmet-ls2.cmd", "--stdio" },
+  cmd = { "emmet-language-server", "--stdio" },
   capabilities = capabilities,
   flags = flags,
   on_attach = on_attach,

@@ -1,8 +1,6 @@
 local configs = require 'nvim-treesitter.configs';
 local install = require 'nvim-treesitter.install';
 
-install.prefer_git = false;
-
 configs.setup {
   textobjects = {
     select = {
@@ -17,7 +15,7 @@ configs.setup {
     },
   },
   ensure_installed = {
-    'lua', 'vim', 'help', 'typescript', 'javascript', 'markdown', 'css'
+    'lua', 'vim', 'help', 'typescript', 'javascript', 'markdown', 'css', 'c'
   },
   sync_install = false,
   highlight = {
