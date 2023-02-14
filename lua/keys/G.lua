@@ -13,8 +13,12 @@ local Git = {
   push = function ()
     vim.cmd 'silent !git push';
   end,
+  status = function ()
+    vim.cmd '!git status';
+  end
 };
 
 vim.keymap.set('n', '<Leader>gi', Git.init, { desc = 'init' });
 vim.keymap.set('n', '<Leader>gg', Git.commitAll, { desc = 'save and commit all' });
 vim.keymap.set('n', '<Leader>gp', Git.push, { desc = 'push' });
+vim.keymap.set('n', '<Leader>gs', Git.status, { desc = 'status' });

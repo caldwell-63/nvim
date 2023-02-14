@@ -19,6 +19,7 @@ How is it different from all the great setups out there?
 - `<Leader>gi`  `git init`
 - `<Leader>gg`  `:wa` `git commit -a -m "_____"`
 - `<Leader>gp`  `git push`
+- `s` status
 
 ## `Y` | Yarn
 

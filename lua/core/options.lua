@@ -30,6 +30,7 @@ vim.cmd([[
   set ignorecase
   set autoindent
   set keywordprg=
+  set clipboard+=unnamedplus
 
   colors github-dark
 
