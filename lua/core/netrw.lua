@@ -29,25 +29,28 @@ vim.cmd([[
 
 local toggle = false;
 
+vim.g.netrw_liststyle = 0;
+vim.g.netrw_banner = 0;
+
 vim.api.nvim_create_autocmd('filetype', {
-  pattern = 'netrw',
-  desc = 'Better mappings for netrw',
-  callback = function()
-    local bind = function(lhs, rhs)
-      vim.keymap.set('n', lhs, rhs, { remap = true, buffer = true })
+    pattern = 'netrw',
+    desc = 'Better mappings for netrw',
+    callback = function()
+      local bind = function(lhs, rhs)
+        vim.keymap.set('n', lhs, rhs, { remap = true, buffer = true })
+      end
+
+      bind('i', '%');
+      bind('l', '<Enter>');
+      bind('h', '-');
+
+      bind('m', function()
+        toggle = vim.api.nvim_get_current_line();
+        print(toggle)
+      end);
+
+      bind('p', function()
+
+      end);
     end
-
-    bind('i', '%');
-    bind('l', '<Enter>');
-    bind('h', '-');
-
-    bind('m', function()
-      toggle = vim.api.nvim_get_current_line();
-      print(toggle)
-    end);
-
-    bind('p', function()
-
-    end);
-  end
 });

@@ -1,7 +1,7 @@
-local config = {
-  leader = ' ',
-  tab = 2,
-  number = false,
+local config           = {
+    leader = ' ',
+    tab = 2,
+    number = false,
 };
 
 vim.g.mapleader        = config.leader;
