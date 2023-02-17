@@ -17,8 +17,7 @@ How is it different from all the great setups out there?
 ## `G` | Git
 
 | Chord | Command |
-| --- | --- |
-| `i` | `git init` |
+| ----- | ------- |
 | `i` | `git init` |
 | `g` | `:wa` `git commit -a -m "{input}"` |
 | `p` | `git push` |
@@ -26,8 +25,10 @@ How is it different from all the great setups out there?
 
 ## `Y` | Yarn
 
-- `y`  `yarn`
-- `a`  `yarn add ____`
+| Chord | Command |
+| ----- | ------- |
+| `y` |  `yarn` |
+| `a` |  `yarn add ____` |
 
 ## `L` | LSP
 
@@ -35,11 +36,13 @@ Shortcuts around commands provided by `lspconfig`. Useful especially that the LS
 isn't always doing perfectly on its own, for example Lua language server has an
 issue when you change a workspace and it needs to be restarted.
 
-- `i` info       `:LspInfo`
-- `l` log        `:LspLog`
-- `r` restart    `:LspRestart`
-- `s` start      `:LspStart`
-- `d` stop       `:LspStop`
+| Chord | Command |
+| ----- | ------- |
+| `i` | `:LspInfo` |
+| `l` | `:LspLog` |
+| `r` | `:LspRestart` |
+| `s` | `:LspStart` |
+| `d` | `:LspStop` |
 
 ## Todo
 
