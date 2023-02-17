@@ -3,8 +3,6 @@ require 'paq' {
   'nvim-lua/plenary.nvim';
   'MunifTanjim/nui.nvim';
   { 'nvim-telescope/telescope.nvim', branch = '0.1.x' };
-  'uga-rosa/ccc.nvim';
-  'numToStr/Comment.nvim';
   'lewis6991/gitsigns.nvim';
   'kylechui/nvim-surround';
 

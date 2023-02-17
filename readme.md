@@ -32,10 +32,6 @@ How is it different from all the great setups out there?
 
 ## `L` | LSP
 
-Shortcuts around commands provided by `lspconfig`. Useful especially that the LSP
-isn't always doing perfectly on its own, for example Lua language server has an
-issue when you change a workspace and it needs to be restarted.
-
 | Chord | Command |
 | ----- | ------- |
 | `i` | `:LspInfo` |

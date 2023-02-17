@@ -1,5 +1,5 @@
 require 'plugin.paq';
-
+require 'etc.neovide';
 require 'core.options';
 require 'core.keymap';
 require 'core.netrw';
