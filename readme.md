@@ -16,15 +16,15 @@ How is it different from all the great setups out there?
 
 ## `G` | Git
 
-- `<Leader>gi`  `git init`
-- `<Leader>gg`  `:wa` `git commit -a -m "_____"`
-- `<Leader>gp`  `git push`
-- `s` status
+- `i`  `git init`
+- `g`  `:wa` `git commit -a -m "_____"`
+- `p`  `git push`
+- `s`  `git status`
 
 ## `Y` | Yarn
 
-- `<Leader>yy`  `yarn`
-- `<Leader>ya`  `yarn add ____`
+- `y`  `yarn`
+- `a`  `yarn add ____`
 
 ## `L` | LSP
 
