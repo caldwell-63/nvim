@@ -16,10 +16,13 @@ How is it different from all the great setups out there?
 
 ## `G` | Git
 
-- `i`  `git init`
-- `g`  `:wa` `git commit -a -m "_____"`
-- `p`  `git push`
-- `s`  `git status`
+| Chord | Command |
+| --- | --- |
+| `i` | `git init` |
+| `i` | `git init` |
+| `g` | `:wa` `git commit -a -m "{input}"` |
+| `p` | `git push` |
+| `s` | `git status` |
 
 ## `Y` | Yarn
 
