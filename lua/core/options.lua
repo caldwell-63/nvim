@@ -1,8 +1,12 @@
-local config           = {
+local config = {
     leader = ' ',
+    theme = 'tokyonight-night',
     tab = 2,
     number = false,
+    cursorCenterLock = true,
 };
+
+vim.cmd('colors ' .. config.theme);
 
 vim.g.mapleader        = config.leader;
 vim.opt.tabstop        = config.tab;
@@ -32,13 +36,11 @@ vim.cmd([[
   set keywordprg=
   set clipboard+=unnamedplus
 
-  colors github-dark
-
   au VimEnter,VimResume * set guicursor=n-c-ci-i-v-ve:hor100-Cursor,r-cr:hor100,o:hor100
   au VimLeave,VimSuspend * set guicursor=
 ]]);
 
-function lockCursorCenterOnVerticalMovements()
+local function lockCursorCenterOnVerticalMovements()
   vim.cmd([[
     nn <C-d> <C-d>zz
     nn <C-u> <C-u>zz
@@ -46,4 +48,4 @@ function lockCursorCenterOnVerticalMovements()
   ]]);
 end
 
-lockCursorCenterOnVerticalMovements();
+if config.cursorCenterLock then lockCursorCenterOnVerticalMovements(); end

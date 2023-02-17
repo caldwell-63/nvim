@@ -7,6 +7,7 @@ require 'paq' {
   'numToStr/Comment.nvim';
   'lewis6991/gitsigns.nvim';
   'kylechui/nvim-surround';
+  'folke/tokyonight.nvim';
 
   {
     'nvim-treesitter/nvim-treesitter',
