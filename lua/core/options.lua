@@ -1,6 +1,6 @@
 local config = {
     leader = ' ',
-    theme = 'tokyonight-night',
+    theme = 'oxocarbon',
     tab = 2,
     number = false,
     cursorCenterLock = true,

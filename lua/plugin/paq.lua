@@ -7,7 +7,10 @@ require 'paq' {
   'numToStr/Comment.nvim';
   'lewis6991/gitsigns.nvim';
   'kylechui/nvim-surround';
+
+  -- themes
   'folke/tokyonight.nvim';
+  'nyoom-engineering/oxocarbon.nvim';
 
   {
     'nvim-treesitter/nvim-treesitter',
