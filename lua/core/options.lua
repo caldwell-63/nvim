@@ -3,6 +3,7 @@ local config = {
     theme = 'oxocarbon',
     tab = 2,
     number = false,
+    highlightLine = false,
     cursorCenterLock = true,
 };
 
@@ -14,6 +15,8 @@ vim.opt.softtabstop    = config.tab;
 vim.opt.shiftwidth     = config.tab;
 vim.opt.number         = config.number;
 vim.opt.relativenumber = config.number;
+vim.opt.cursorline     = config.highlightLine;
+vim.opt.autochdir      = true;
 vim.opt.termguicolors  = true;
 vim.opt.expandtab      = true;
 vim.opt.swapfile       = false;
@@ -27,8 +30,6 @@ vim.opt.foldlevel      = 16;
 vim.cmd([[
   set foldmethod=expr
   set foldexpr=nvim_treesitter#foldexpr()
-  set cul
-  set nocuc
   set tw=81
   set cc=81
   set ignorecase

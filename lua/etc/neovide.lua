@@ -1,7 +1,7 @@
 if vim.g.neovide then
   vim.cmd [[set guifont=JetBrainsMono\ NF:h28:b]];
   vim.g.neovide_fullscreen = true
-  vim.g.neovide_transparency = 0.8;
+  vim.g.neovide_transparency = 1;
   vim.g.neovide_hide_mouse_when_typing = true
   vim.g.neovide_refresh_rate = 144
   vim.g.neovide_refresh_rate_idle = 1
