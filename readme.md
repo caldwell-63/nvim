@@ -12,6 +12,12 @@ How is it different from all the great setups out there?
   supporting tabs, panes, keymaps, configs, etc, I'd recommend wezterm
 - No compatibility with Windows guaranteed at all
 
+## LSP
+
+- `gi` go to implementation
+- `gd` go to definition
+- `K` hover
+
 ## Keys (`keys.*`)
 
 ## `G` | Git
@@ -42,10 +48,9 @@ How is it different from all the great setups out there?
 
 ## Todo
 
-### Markdown
-
-- Nested syntax highlights
-- Preview
+- Markdown nested syntax highlights
+- Markdown preview
+- Auto rename JSX tags
 
 ## Resources
 

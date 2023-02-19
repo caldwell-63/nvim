@@ -1,18 +1,38 @@
 {
-	"console.log": {
+  "console.log": {
     "description": "console.log(...)",
-		"prefix": "l",
-		"body": [
-			"console.log($0);"
-		]
-	},
+    "prefix": "l",
+    "body": [
+      "console.log($0);"
+    ]
+  },
   "function": {
     "description": "function",
     "prefix": "f",
     "body": [
       "function $1($2) {",
-        "$0",
+      "$0",
       "}"
+    ]
+  },
+  "export function": {
+    "description": "export function",
+    "prefix": "f",
+    "body": [
+      "function $1($2) {",
+      "  $0",
+      "}"
+    ]
+  },
+  "styled": {
+    "description": "styled",
+    "prefix": "s",
+    "body": [
+      "import styled from '@emotion/styled';",
+      "",
+      "export const Style = styled.div`",
+      "  $0",
+      "`;"
     ]
   },
   "interface": {
@@ -20,7 +40,7 @@
     "prefix": "i",
     "body": [
       "interface $1 {",
-        "$0",
+      "  $0",
       "}"
     ]
   }
