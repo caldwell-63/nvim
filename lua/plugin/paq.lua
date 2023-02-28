@@ -5,6 +5,8 @@ require 'paq' {
   { 'nvim-telescope/telescope.nvim', branch = '0.1.x' };
   'lewis6991/gitsigns.nvim';
   'kylechui/nvim-surround';
+  'uga-rosa/ccc.nvim';
+  'numToStr/Comment.nvim';
 
   -- themes
   'folke/tokyonight.nvim';
