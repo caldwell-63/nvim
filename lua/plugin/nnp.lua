@@ -1,32 +1,32 @@
 require("no-neck-pain").setup({
-    -- Prints useful logs about triggered events, and reasons actions are executed.
     debug = false,
-    -- When `true`, enables the plugin when you start Neovim.
-    enableOnVimEnter = false,
+    enableOnVimEnter = true,
+
     -- When `true`, enables the plugin when you enter a new Tab.
     -- note: it does not trigger if it's an existing tab, to prevent unwanted interfer with user's decisions.
     enableOnTabEnter = false,
+
     -- The width of the focused window that will be centered, accepted values are:
     -- - Any integer > 0.
     -- - "textwidth", which retrieves the value of the `vim.bo.textwidth` option.
     -- - "colorcolumn", which retrieves the value of the `vim.opt.colorcolumn` option.
     -- When the terminal width is less than the `width` option, the side buffers won't be created.
     width = 80,
+
     -- Represents the lowest width value a side buffer should be.
     -- This option can be useful when switching window size frequently, example:
     -- in full screen screen, width is 210, you define an NNP `width` of 100, which creates each side buffer with a width of 50. If you resize your terminal to the half of the screen, each side buffer would be of width 5 and thereforce might not be useful and/or add "noise" to your workflow.
     minSideBufferWidth = 5,
     -- Sets a global mapping to Neovim, which allows you to toggle the plugin.
     -- When `false`, the mapping is not created.
+
     toggleMapping = "<Leader>np",
-    -- Sets a global mapping to Neovim, which allows you to increase the width (+5) of the main window.
-    -- When `false`, the mapping is not created.
-    widthUpMapping = "<Leader>n=",
-    -- Sets a global mapping to Neovim, which allows you to decrease the width (-5) of the main window.
-    -- When `false`, the mapping is not created.
-    widthDownMapping = "<Leader>n-",
+    widthUpMapping = false,
+    widthDownMapping = false,
+
     -- Disables the plugin if the last valid buffer in the list have been closed.
     disableOnLastBuffer = false,
+
     -- When `true`, disabling the plugin closes every other windows except the initially focused one.
     killAllBuffersOnDisable = false,
     --- Common options that are set to both side buffers.
