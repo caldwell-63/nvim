@@ -7,6 +7,7 @@ require 'paq' {
   'kylechui/nvim-surround';
   'uga-rosa/ccc.nvim';
   'numToStr/Comment.nvim';
+  'shortcuts/no-neck-pain.nvim';
 
   -- themes
   'folke/tokyonight.nvim';

@@ -9,9 +9,12 @@ local Git = {
 
     vim.cmd 'silent !git add .';
     vim.cmd('silent !git commit -a -m "' .. commitMessage .. '"');
+
+    print('git committed: ' .. commitMessage);
   end,
   push = function ()
     vim.cmd 'silent !git push';
+    print 'git pushed';
   end,
   status = function ()
     vim.cmd '!git status';
